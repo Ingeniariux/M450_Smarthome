@@ -1,0 +1,15 @@
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\bin\Debug\net8.0\smarthome.exe
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\bin\Debug\net8.0\smarthome.deps.json
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\bin\Debug\net8.0\smarthome.runtimeconfig.json
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\bin\Debug\net8.0\smarthome.dll
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\bin\Debug\net8.0\smarthome.pdb
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\smarthome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\smarthome.AssemblyInfoInputs.cache
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\smarthome.AssemblyInfo.cs
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\smarthome.csproj.CoreCompileInputs.cache
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\smarthome.sourcelink.json
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\smarthome.dll
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\refint\smarthome.dll
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\smarthome.pdb
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\smarthome.genruntimeconfig.cache
+C:\Users\Noah Rüttimann\Desktop\M450\smarthome\M450_Smarthome\obj\Debug\net8.0\ref\smarthome.dll
