@@ -10,12 +10,21 @@ namespace smarthome
     {
         public Awnings() { }
 
-        float max_windspeed;
+        float max_windspeed = 30;
 
-        bool compare_windspeed() { }
+        bool compare_windspeed() 
+        {
+            return max_windspeed < weather_sensor.windspeed;
+        }
         public override bool UpdateState()
         {
-            throw new NotImplementedException();
+            bool supposedstate = compare_windspeed() && !weather_sensor.rain;
+            if (current_State != supposedstate)
+            {
+                current_State = supposedstate;
+                return true;
+            }
+            return false;
         }
     }
 }

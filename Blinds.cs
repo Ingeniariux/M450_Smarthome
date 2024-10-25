@@ -11,7 +11,13 @@ namespace smarthome
         Blinds() { }
         public override bool UpdateState()
         {
-            throw new NotImplementedException();
+            bool supposedstate = room_sensor.room_temp < weather_sensor.outdoor_temp && room_sensor.amount_person == 0;
+            if (current_State != supposedstate)
+            {
+                current_State = supposedstate;
+                return true;
+            }
+            return false;
         }
     }
 }

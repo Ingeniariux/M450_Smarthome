@@ -10,11 +10,17 @@ namespace smarthome
     {
         public WeatherSensor() { }
 
-        float outdoor_temp;
-        float windspeed;
-        bool rain;
+        public float outdoor_temp { get; private set; }
+        public float windspeed { get; private set; }
+        public bool rain { get; private set; }
 
+        public delegate void Notify();
+
+        public event Notify ProcessCompleted;
         void Simulate()
-        { }
+        {
+            //Realistically change Values
+            ProcessCompleted.Invoke();
+        }
     }
 }

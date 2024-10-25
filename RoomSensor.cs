@@ -10,8 +10,8 @@ namespace smarthome
     {
         public RoomSensor() { }
 
-        int amount_person;
-        float room_temp;
+        public int amount_person { get; private set; }
+        public float room_temp { get; private set; }
 
         void Simulate()
         { }
