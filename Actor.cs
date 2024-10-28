@@ -8,19 +8,30 @@ namespace smarthome
 {
     public abstract class Actor
     {
-        bool current_logic_state;
         protected RoomSensor room_sensor;
         protected WeatherSensor weather_sensor;
-
-        protected Actor() { weather_sensor.ProcessCompleted += Weather_sensor_ProcessCompleted; }
-
+        protected bool current_logic_state;
         protected bool current_State;
+
+        protected Actor(RoomSensor roomSensor, WeatherSensor weatherSensor)
+        {
+            room_sensor = roomSensor;
+            weather_sensor = weatherSensor;
+
+            if (weather_sensor != null)
+            {
+                weather_sensor.ProcessCompleted += Weather_sensor_ProcessCompleted;
+            }
+        }
+
+        public bool CurrentState => current_State;
+
         private void Weather_sensor_ProcessCompleted()
         {
             UpdateState();
         }
 
-        public bool SetLogicState( bool state)
+        public bool SetLogicState(bool state)
         {
             if (current_logic_state != state)
             {
@@ -28,11 +39,6 @@ namespace smarthome
                 return true;
             }
             return false;
-        }
-
-         bool Compare_temp(float temp1, float temp2)
-        { 
-        return temp1 > temp2;
         }
 
         public abstract bool UpdateState();

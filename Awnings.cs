@@ -8,17 +8,25 @@ namespace smarthome
 {
     public class Awnings : Actor
     {
-        public Awnings() { }
+        public Awnings(RoomSensor roomSensor, WeatherSensor weatherSensor)
+            : base(roomSensor, weatherSensor)
+        {
+        }
 
-        float max_windspeed = 30;
+        private const float max_windspeed = 30;
+        private const float temperatureDifferenceThreshold = 2f;
 
-        bool compare_windspeed() 
+        private bool compare_windspeed()
         {
             return max_windspeed < weather_sensor.windspeed;
         }
+
         public override bool UpdateState()
         {
-            bool supposedstate = compare_windspeed() && !weather_sensor.rain;
+            bool supposedstate = (room_sensor.room_temp > weather_sensor.outdoor_temp + temperatureDifferenceThreshold ||
+                                  room_sensor.room_temp < weather_sensor.outdoor_temp - temperatureDifferenceThreshold) &&
+                                  !weather_sensor.rain;
+
             if (current_State != supposedstate)
             {
                 current_State = supposedstate;
